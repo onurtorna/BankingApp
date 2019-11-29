@@ -1,0 +1,14 @@
+platform :ios, '11.0'
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+use_frameworks!
+
+def banking_app
+    pod 'Alamofire', '~> 4.8'
+end
+
+target 'BankingApp' do
+    banking_app
+end
