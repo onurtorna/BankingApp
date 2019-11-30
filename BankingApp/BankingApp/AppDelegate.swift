@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        // Set the credentials first. This can be also done by a login action
+        SessionManager.shared.setNetworkCredentials(username: Global.Network.defaultUsername,
+                                                    password: Global.Network.defaultPassword)
+
         return true
     }
 

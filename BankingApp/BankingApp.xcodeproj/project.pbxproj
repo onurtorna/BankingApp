@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1031658D2391E7470000C04F /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031658C2391E7470000C04F /* APIRouter.swift */; };
+		1031658F2391E74D0000C04F /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031658E2391E74D0000C04F /* Network.swift */; };
+		103165912391E7760000C04F /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165902391E7760000C04F /* ErrorHandler.swift */; };
+		103165962391E7D00000C04F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165952391E7CF0000C04F /* NetworkManager.swift */; };
+		103165982391E7E30000C04F /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165972391E7E30000C04F /* ServiceManager.swift */; };
+		1031659A2391E7F70000C04F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165992391E7F70000C04F /* SessionManager.swift */; };
+		1031659D2391E8370000C04F /* Error+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031659C2391E8370000C04F /* Error+Extensions.swift */; };
+		1031659F2391E8520000C04F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031659E2391E8520000C04F /* Global.swift */; };
 		10DA0B492391E3F800BDDD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B482391E3F800BDDD21 /* AppDelegate.swift */; };
 		10DA0B4B2391E3F800BDDD21 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */; };
 		10DA0B4E2391E3F800BDDD21 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DA0B4C2391E3F800BDDD21 /* Landing.storyboard */; };
@@ -36,6 +44,14 @@
 
 /* Begin PBXFileReference section */
 		0E8EB2303F990B6B5B6E5254 /* Pods_BankingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1031658C2391E7470000C04F /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		1031658E2391E74D0000C04F /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		103165902391E7760000C04F /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		103165952391E7CF0000C04F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		103165972391E7E30000C04F /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		103165992391E7F70000C04F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		1031659C2391E8370000C04F /* Error+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extensions.swift"; sourceTree = "<group>"; };
+		1031659E2391E8520000C04F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		10DA0B452391E3F800BDDD21 /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DA0B482391E3F800BDDD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +95,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1031658B2391E73A0000C04F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1031658C2391E7470000C04F /* APIRouter.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		103165922391E78D0000C04F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				103165952391E7CF0000C04F /* NetworkManager.swift */,
+				103165972391E7E30000C04F /* ServiceManager.swift */,
+				103165992391E7F70000C04F /* SessionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1031659B2391E82D0000C04F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1031659C2391E8370000C04F /* Error+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		10DA0B3C2391E3F800BDDD21 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				10DA0B482391E3F800BDDD21 /* AppDelegate.swift */,
+				1031659E2391E8520000C04F /* Global.swift */,
+				1031659B2391E82D0000C04F /* Extensions */,
 				10DA0B792391E44200BDDD21 /* Models */,
 				10DA0B782391E43C00BDDD21 /* Network */,
 				10DA0B762391E41E00BDDD21 /* Resources */,
@@ -152,6 +196,10 @@
 		10DA0B782391E43C00BDDD21 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				103165922391E78D0000C04F /* Managers */,
+				1031658B2391E73A0000C04F /* Service */,
+				1031658E2391E74D0000C04F /* Network.swift */,
+				103165902391E7760000C04F /* ErrorHandler.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -178,7 +226,6 @@
 				A1FB80EC9136687590E74034 /* Pods-BankingApp.debug.xcconfig */,
 				60F4C074E120BE88172C830A /* Pods-BankingApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -365,8 +412,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1031659D2391E8370000C04F /* Error+Extensions.swift in Sources */,
 				10DA0B4B2391E3F800BDDD21 /* LandingViewController.swift in Sources */,
+				1031659A2391E7F70000C04F /* SessionManager.swift in Sources */,
+				1031658D2391E7470000C04F /* APIRouter.swift in Sources */,
+				103165982391E7E30000C04F /* ServiceManager.swift in Sources */,
+				1031659F2391E8520000C04F /* Global.swift in Sources */,
+				103165962391E7D00000C04F /* NetworkManager.swift in Sources */,
+				103165912391E7760000C04F /* ErrorHandler.swift in Sources */,
 				10DA0B492391E3F800BDDD21 /* AppDelegate.swift in Sources */,
+				1031658F2391E74D0000C04F /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
