@@ -9,7 +9,7 @@
 import Foundation
 
 struct SearchBICFields {
-    var blzKey: String?
+    var blz: String?
     var countryCode: String?
     var location: String?
     var bankName: String?

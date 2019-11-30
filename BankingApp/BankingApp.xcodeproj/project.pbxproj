@@ -28,6 +28,7 @@
 		103165BA2392BEB20000C04F /* LandingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165B92392BEB20000C04F /* LandingRouter.swift */; };
 		103165BD2392C0070000C04F /* BankSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165BC2392C0070000C04F /* BankSearchViewController.swift */; };
 		103165BF2392C0250000C04F /* BankSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103165BE2392C0250000C04F /* BankSearch.storyboard */; };
+		103561FD2392D6D4003D0EEC /* BankSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103561FC2392D6D4003D0EEC /* BankSearchViewModel.swift */; };
 		10DA0B492391E3F800BDDD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B482391E3F800BDDD21 /* AppDelegate.swift */; };
 		10DA0B4B2391E3F800BDDD21 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */; };
 		10DA0B4E2391E3F800BDDD21 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DA0B4C2391E3F800BDDD21 /* Landing.storyboard */; };
@@ -78,6 +79,7 @@
 		103165B92392BEB20000C04F /* LandingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingRouter.swift; sourceTree = "<group>"; };
 		103165BC2392C0070000C04F /* BankSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSearchViewController.swift; sourceTree = "<group>"; };
 		103165BE2392C0250000C04F /* BankSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BankSearch.storyboard; sourceTree = "<group>"; };
+		103561FC2392D6D4003D0EEC /* BankSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSearchViewModel.swift; sourceTree = "<group>"; };
 		10DA0B452391E3F800BDDD21 /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DA0B482391E3F800BDDD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -199,10 +201,19 @@
 		103165BB2392BFE40000C04F /* BankSearch */ = {
 			isa = PBXGroup;
 			children = (
-				103165BC2392C0070000C04F /* BankSearchViewController.swift */,
 				103165BE2392C0250000C04F /* BankSearch.storyboard */,
+				103561FF23933122003D0EEC /* SearchFieldEntry */,
 			);
 			path = BankSearch;
+			sourceTree = "<group>";
+		};
+		103561FF23933122003D0EEC /* SearchFieldEntry */ = {
+			isa = PBXGroup;
+			children = (
+				103165BC2392C0070000C04F /* BankSearchViewController.swift */,
+				103561FC2392D6D4003D0EEC /* BankSearchViewModel.swift */,
+			);
+			path = SearchFieldEntry;
 			sourceTree = "<group>";
 		};
 		10DA0B3C2391E3F800BDDD21 = {
@@ -508,6 +519,7 @@
 				10DA0B4B2391E3F800BDDD21 /* LandingViewController.swift in Sources */,
 				1031659A2391E7F70000C04F /* SessionManager.swift in Sources */,
 				1031658D2391E7470000C04F /* APIRouter.swift in Sources */,
+				103561FD2392D6D4003D0EEC /* BankSearchViewModel.swift in Sources */,
 				103165BA2392BEB20000C04F /* LandingRouter.swift in Sources */,
 				103165B02392ABFC0000C04F /* SearchBICRequest.swift in Sources */,
 				103165982391E7E30000C04F /* ServiceManager.swift in Sources */,

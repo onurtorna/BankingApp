@@ -23,10 +23,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="top" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hSG-SJ-6Xn">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="456"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="491.5"/>
                                                 <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill at least one search criteria" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIZ-oM-1Ji">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oLq-5W-khg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="84.5"/>
+                                                        <rect key="frame" x="0.0" y="35.5" width="414" height="84.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDs-8O-ezx">
                                                                 <rect key="frame" x="20" y="10" width="374" height="20.5"/>
@@ -38,12 +44,15 @@
                                                                 <rect key="frame" x="20" y="40.5" width="374" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="textFieldEditingChanged:" destination="Ko2-Sq-g7G" eventType="editingChanged" id="ySJ-Rg-HZX"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="20" bottom="10" trailing="20"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JuG-vH-HXV">
-                                                        <rect key="frame" x="0.0" y="99.5" width="414" height="84.5"/>
+                                                        <rect key="frame" x="0.0" y="135" width="414" height="84.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6V-wm-vYt">
                                                                 <rect key="frame" x="20" y="10" width="374" height="20.5"/>
@@ -55,12 +64,15 @@
                                                                 <rect key="frame" x="20" y="40.5" width="374" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="textFieldEditingChanged:" destination="Ko2-Sq-g7G" eventType="editingChanged" id="6rM-zF-gGd"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="20" bottom="10" trailing="20"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0GJ-WZ-kEv">
-                                                        <rect key="frame" x="0.0" y="199" width="414" height="84.5"/>
+                                                        <rect key="frame" x="0.0" y="234.5" width="414" height="84.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qA-nV-rPf">
                                                                 <rect key="frame" x="20" y="10" width="374" height="20.5"/>
@@ -72,12 +84,15 @@
                                                                 <rect key="frame" x="20" y="40.5" width="374" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="textFieldEditingChanged:" destination="Ko2-Sq-g7G" eventType="editingChanged" id="zbB-WL-bCP"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="20" bottom="10" trailing="20"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o2e-WW-H0N">
-                                                        <rect key="frame" x="0.0" y="298.5" width="414" height="84.5"/>
+                                                        <rect key="frame" x="0.0" y="334" width="414" height="84.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aid-j1-hh3">
                                                                 <rect key="frame" x="20" y="10" width="374" height="20.5"/>
@@ -89,12 +104,15 @@
                                                                 <rect key="frame" x="20" y="40.5" width="374" height="34"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="textFieldEditingChanged:" destination="Ko2-Sq-g7G" eventType="editingChanged" id="ibt-8B-S5C"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="20" bottom="10" trailing="20"/>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRS-sQ-Zr8">
-                                                        <rect key="frame" x="0.0" y="398" width="414" height="58"/>
+                                                        <rect key="frame" x="0.0" y="433.5" width="414" height="58"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                                                         <state key="normal" title="Search"/>
                                                         <connections>

@@ -15,10 +15,13 @@ final class BankSearchViewController: UIViewController {
     }
 
     @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var bankNameTextField: UITextField!
     @IBOutlet private weak var locationTextField: UITextField!
     @IBOutlet private weak var countryCodeTextField: UITextField!
     @IBOutlet private weak var blzTextField: UITextField!
+
+    var viewModel: BankSearchViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,10 @@ final class BankSearchViewController: UIViewController {
         navigationItem.title = "Bank Search"
         initializeViews()
         registerForKeyboardNotifications()
+
+        viewModel.stateChangeHandler = { [weak self] change in
+            self?.stateChange(handle: change)
+        }
     }
 
 }
@@ -33,7 +40,16 @@ final class BankSearchViewController: UIViewController {
 // MARK: - Helpers
 private extension BankSearchViewController {
 
+    func stateChange(handle change: BankSearchState.Change) {
+        switch change {
+        case .isEnteredFieldsValid(let isValid):
+            searchButton.isEnabled = isValid
+        }
+    }
+
     func initializeViews() {
+        searchButton.isEnabled = false
+
         bankNameTextField.placeholder = "Please enter bank name to Search (Optional)"
         locationTextField.placeholder = "Please enter address to Search (Optional)"
         countryCodeTextField.placeholder = "Please enter country code to Search (Optional)"
@@ -46,6 +62,25 @@ private extension BankSearchViewController {
 
     @IBAction func searchButtonDidTapped(_ sender: Any) {
         // TODO: To be implemented
+    }
+
+    @IBAction func textFieldEditingChanged(_ sender: UITextField) {
+        let type: BankSearchViewModel.SearchField
+        let value = sender.text
+        switch sender {
+        case bankNameTextField:
+            type = .bankName
+        case locationTextField:
+            type = .location
+        case countryCodeTextField:
+            type = .countryCode
+        case blzTextField:
+            type = .blz
+        default:
+            type = .invalid
+        }
+
+        viewModel.setSearchField(value: value, type: type)
     }
 }
 

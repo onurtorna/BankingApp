@@ -12,7 +12,9 @@ final class LandingRouter: LandingRoutingProtocol {
 
     func viewControllerDidRequestBankSearch(_ viewController: UIViewController) {
         let nextStoryBoard = UIStoryboard(name: Global.Storyboard.bankSearch, bundle: nil)
-        guard let nextViewController = nextStoryBoard.instantiateInitialViewController() else { return }
+        guard let nextViewController = nextStoryBoard.instantiateInitialViewController() as? BankSearchViewController else { return }
+        let initialState = BankSearchState()
+        nextViewController.viewModel = BankSearchViewModel(state: initialState)
         viewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
 

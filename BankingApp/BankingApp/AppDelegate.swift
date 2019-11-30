@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SessionManager.shared.setNetworkCredentials(username: Global.Network.defaultUsername,
                                                     password: Global.Network.defaultPassword)
 
-
         return true
     }
 }

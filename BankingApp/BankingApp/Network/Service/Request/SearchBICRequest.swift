@@ -21,7 +21,7 @@ final class SearchBICRequest {
     static func generateParameters(fields: SearchBICFields, page: Int) -> Parameters {
 
         var parameters: Parameters = [:]
-        parameters.addObjectIfExists(key: Mapping.blzKey, object: fields.blzKey)
+        parameters.addObjectIfExists(key: Mapping.blzKey, object: fields.blz)
         parameters.addObjectIfExists(key: Mapping.countryCodeKey, object: fields.countryCode)
         parameters.addObjectIfExists(key: Mapping.locationKey, object: fields.location)
         parameters.addObjectIfExists(key: Mapping.bankNameKey, object: fields.bankName)
