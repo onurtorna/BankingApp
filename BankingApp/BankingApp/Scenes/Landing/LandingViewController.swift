@@ -8,13 +8,34 @@
 
 import UIKit
 
-class LandingViewController: UIViewController {
+final class LandingViewController: UIViewController {
+
+    var router: LandingRoutingProtocol = LandingRouter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        applyStyling()
+        navigationItem.title = "Welcome"
     }
-
 
 }
 
+// MARK: - Actions
+private extension LandingViewController {
+
+    @IBAction func validateBICIBANButtonDidTapped(_ sender: Any) {
+        router.viewControllerDidRequestBICIBANValidation(self)
+    }
+
+    @IBAction func searchForBankButtonDidTapped(_ sender: Any) {
+        router.viewControllerDidRequestBankSearch(self)
+    }
+}
+
+// MARK: - Helpers
+private extension LandingViewController {
+
+    func applyStyling() {
+        // TODO: Styling changes might be applied here
+    }
+}
