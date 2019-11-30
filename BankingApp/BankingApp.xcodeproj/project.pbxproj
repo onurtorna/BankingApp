@@ -29,6 +29,10 @@
 		103165BD2392C0070000C04F /* BankSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165BC2392C0070000C04F /* BankSearchViewController.swift */; };
 		103165BF2392C0250000C04F /* BankSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103165BE2392C0250000C04F /* BankSearch.storyboard */; };
 		103561FD2392D6D4003D0EEC /* BankSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103561FC2392D6D4003D0EEC /* BankSearchViewModel.swift */; };
+		103562022393317F003D0EEC /* BankSearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103562012393317F003D0EEC /* BankSearchResultViewController.swift */; };
+		10356205239331F2003D0EEC /* BankSearchRoutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10356204239331F2003D0EEC /* BankSearchRoutingProtocol.swift */; };
+		1035620723933204003D0EEC /* BankSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1035620623933204003D0EEC /* BankSearchRouter.swift */; };
+		1035620A2393327F003D0EEC /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103562092393327F003D0EEC /* Reusable.swift */; };
 		10DA0B492391E3F800BDDD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B482391E3F800BDDD21 /* AppDelegate.swift */; };
 		10DA0B4B2391E3F800BDDD21 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */; };
 		10DA0B4E2391E3F800BDDD21 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DA0B4C2391E3F800BDDD21 /* Landing.storyboard */; };
@@ -80,6 +84,10 @@
 		103165BC2392C0070000C04F /* BankSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSearchViewController.swift; sourceTree = "<group>"; };
 		103165BE2392C0250000C04F /* BankSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BankSearch.storyboard; sourceTree = "<group>"; };
 		103561FC2392D6D4003D0EEC /* BankSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSearchViewModel.swift; sourceTree = "<group>"; };
+		103562012393317F003D0EEC /* BankSearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSearchResultViewController.swift; sourceTree = "<group>"; };
+		10356204239331F2003D0EEC /* BankSearchRoutingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSearchRoutingProtocol.swift; sourceTree = "<group>"; };
+		1035620623933204003D0EEC /* BankSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSearchRouter.swift; sourceTree = "<group>"; };
+		103562092393327F003D0EEC /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		10DA0B452391E3F800BDDD21 /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DA0B482391E3F800BDDD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				103165BE2392C0250000C04F /* BankSearch.storyboard */,
+				10356203239331E0003D0EEC /* Router */,
 				103561FF23933122003D0EEC /* SearchFieldEntry */,
+				1035620023933157003D0EEC /* SearchResults */,
 			);
 			path = BankSearch;
 			sourceTree = "<group>";
@@ -214,6 +224,31 @@
 				103561FC2392D6D4003D0EEC /* BankSearchViewModel.swift */,
 			);
 			path = SearchFieldEntry;
+			sourceTree = "<group>";
+		};
+		1035620023933157003D0EEC /* SearchResults */ = {
+			isa = PBXGroup;
+			children = (
+				103562012393317F003D0EEC /* BankSearchResultViewController.swift */,
+			);
+			path = SearchResults;
+			sourceTree = "<group>";
+		};
+		10356203239331E0003D0EEC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				10356204239331F2003D0EEC /* BankSearchRoutingProtocol.swift */,
+				1035620623933204003D0EEC /* BankSearchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		103562082393326D003D0EEC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				103562092393327F003D0EEC /* Reusable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		10DA0B3C2391E3F800BDDD21 = {
@@ -246,6 +281,7 @@
 				1031659B2391E82D0000C04F /* Extensions */,
 				10DA0B792391E44200BDDD21 /* Models */,
 				10DA0B782391E43C00BDDD21 /* Network */,
+				103562082393326D003D0EEC /* Protocols */,
 				10DA0B762391E41E00BDDD21 /* Resources */,
 				10DA0B772391E43400BDDD21 /* Scenes */,
 			);
@@ -523,6 +559,8 @@
 				103165BA2392BEB20000C04F /* LandingRouter.swift in Sources */,
 				103165B02392ABFC0000C04F /* SearchBICRequest.swift in Sources */,
 				103165982391E7E30000C04F /* ServiceManager.swift in Sources */,
+				1035620A2393327F003D0EEC /* Reusable.swift in Sources */,
+				1035620723933204003D0EEC /* BankSearchRouter.swift in Sources */,
 				1031659F2391E8520000C04F /* Global.swift in Sources */,
 				103165B22392AC1B0000C04F /* Dictionary+JSON.swift in Sources */,
 				103165962391E7D00000C04F /* NetworkManager.swift in Sources */,
@@ -533,7 +571,9 @@
 				103165A223928D220000C04F /* SuccessResponse.swift in Sources */,
 				1031658F2391E74D0000C04F /* Network.swift in Sources */,
 				103165AB2392A38D0000C04F /* BAError.swift in Sources */,
+				10356205239331F2003D0EEC /* BankSearchRoutingProtocol.swift in Sources */,
 				103165A423928D690000C04F /* BaseReponse.swift in Sources */,
+				103562022393317F003D0EEC /* BankSearchResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

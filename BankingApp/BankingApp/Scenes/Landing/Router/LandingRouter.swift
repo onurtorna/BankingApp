@@ -15,6 +15,7 @@ final class LandingRouter: LandingRoutingProtocol {
         guard let nextViewController = nextStoryBoard.instantiateInitialViewController() as? BankSearchViewController else { return }
         let initialState = BankSearchState()
         nextViewController.viewModel = BankSearchViewModel(state: initialState)
+        nextViewController.router = BankSearchRouter()
         viewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
 

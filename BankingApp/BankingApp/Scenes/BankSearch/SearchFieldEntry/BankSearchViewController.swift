@@ -22,6 +22,7 @@ final class BankSearchViewController: UIViewController {
     @IBOutlet private weak var blzTextField: UITextField!
 
     var viewModel: BankSearchViewModel!
+    var router: BankSearchRoutingProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,9 @@ private extension BankSearchViewController {
         switch change {
         case .isEnteredFieldsValid(let isValid):
             searchButton.isEnabled = isValid
+
+        case .searchRequested(let searchFields):
+            router.viewControllerDidRequestBankSearch(self, enteredFields: searchFields)
         }
     }
 
@@ -61,7 +65,7 @@ private extension BankSearchViewController {
 private extension BankSearchViewController {
 
     @IBAction func searchButtonDidTapped(_ sender: Any) {
-        // TODO: To be implemented
+        viewModel.requestSearch()
     }
 
     @IBAction func textFieldEditingChanged(_ sender: UITextField) {

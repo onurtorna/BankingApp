@@ -12,6 +12,7 @@ final class BankSearchState {
 
     enum Change {
         case isEnteredFieldsValid(Bool)
+        case searchRequested(searchFields: SearchBICFields)
     }
 
     var onChange: ((BankSearchState.Change) -> Void)?
@@ -45,6 +46,11 @@ final class BankSearchViewModel {
         self.state = state
     }
 
+}
+
+// MARK: - Public
+extension BankSearchViewModel {
+
     func setSearchField(value: String?, type: SearchField) {
         switch type {
         case .blz:
@@ -60,6 +66,10 @@ final class BankSearchViewModel {
         }
 
         validateFields()
+    }
+
+    func requestSearch() {
+        state.onChange?(.searchRequested(searchFields: state.searchFields))
     }
 }
 
