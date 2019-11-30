@@ -23,5 +23,6 @@ class Global {
 
     enum Storyboard {
         static let landing = "Landing"
+        static let bankSearch = "BankSearch"
     }
 }

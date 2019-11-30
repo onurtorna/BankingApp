@@ -11,7 +11,9 @@ import UIKit
 final class LandingRouter: LandingRoutingProtocol {
 
     func viewControllerDidRequestBankSearch(_ viewController: UIViewController) {
-        // TODO: To be implemented
+        let nextStoryBoard = UIStoryboard(name: Global.Storyboard.bankSearch, bundle: nil)
+        guard let nextViewController = nextStoryBoard.instantiateInitialViewController() else { return }
+        viewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
 
     func viewControllerDidRequestBICIBANValidation(_ viewController: UIViewController) {

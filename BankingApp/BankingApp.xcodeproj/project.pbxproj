@@ -26,6 +26,8 @@
 		103165B52392AD700000C04F /* SearchBICFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165B42392AD700000C04F /* SearchBICFields.swift */; };
 		103165B82392BEA00000C04F /* LandingRoutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165B72392BEA00000C04F /* LandingRoutingProtocol.swift */; };
 		103165BA2392BEB20000C04F /* LandingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165B92392BEB20000C04F /* LandingRouter.swift */; };
+		103165BD2392C0070000C04F /* BankSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165BC2392C0070000C04F /* BankSearchViewController.swift */; };
+		103165BF2392C0250000C04F /* BankSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103165BE2392C0250000C04F /* BankSearch.storyboard */; };
 		10DA0B492391E3F800BDDD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B482391E3F800BDDD21 /* AppDelegate.swift */; };
 		10DA0B4B2391E3F800BDDD21 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */; };
 		10DA0B4E2391E3F800BDDD21 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DA0B4C2391E3F800BDDD21 /* Landing.storyboard */; };
@@ -74,6 +76,8 @@
 		103165B42392AD700000C04F /* SearchBICFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBICFields.swift; sourceTree = "<group>"; };
 		103165B72392BEA00000C04F /* LandingRoutingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingRoutingProtocol.swift; sourceTree = "<group>"; };
 		103165B92392BEB20000C04F /* LandingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingRouter.swift; sourceTree = "<group>"; };
+		103165BC2392C0070000C04F /* BankSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSearchViewController.swift; sourceTree = "<group>"; };
+		103165BE2392C0250000C04F /* BankSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BankSearch.storyboard; sourceTree = "<group>"; };
 		10DA0B452391E3F800BDDD21 /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DA0B482391E3F800BDDD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +196,15 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		103165BB2392BFE40000C04F /* BankSearch */ = {
+			isa = PBXGroup;
+			children = (
+				103165BC2392C0070000C04F /* BankSearchViewController.swift */,
+				103165BE2392C0250000C04F /* BankSearch.storyboard */,
+			);
+			path = BankSearch;
+			sourceTree = "<group>";
+		};
 		10DA0B3C2391E3F800BDDD21 = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				10DA0B7A2391E45B00BDDD21 /* Landing */,
+				103165BB2392BFE40000C04F /* BankSearch */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -418,6 +432,7 @@
 			files = (
 				10DA0B532391E3F900BDDD21 /* LaunchScreen.storyboard in Resources */,
 				10DA0B502391E3F900BDDD21 /* Assets.xcassets in Resources */,
+				103165BF2392C0250000C04F /* BankSearch.storyboard in Resources */,
 				10DA0B4E2391E3F800BDDD21 /* Landing.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103165BD2392C0070000C04F /* BankSearchViewController.swift in Sources */,
 				1031659D2391E8370000C04F /* Error+Extensions.swift in Sources */,
 				103165A923928F610000C04F /* SearchBICResponse.swift in Sources */,
 				103165B82392BEA00000C04F /* LandingRoutingProtocol.swift in Sources */,
