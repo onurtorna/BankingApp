@@ -10,7 +10,7 @@ import Alamofire
 
 enum APIRouter {
 
-    case searchBIC(blz: String)
+    case searchBIC(fields: SearchBICFields, pageNumber: Int)
 
     // MARK: - Request
     var request: Alamofire.DataRequest {
@@ -63,8 +63,11 @@ enum APIRouter {
     }
 
     private var parameters: Parameters? {
-        // TODO: To be implemented
-        return [:]
+
+        switch self {
+        case let .searchBIC(fields: fields, pageNumber: pageNumber):
+            return SearchBICRequest.generateParameters(fields: fields, page: pageNumber)
+        }
     }
 }
 

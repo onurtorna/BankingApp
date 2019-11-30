@@ -15,8 +15,10 @@ class Global {
         static let defaultPassword = "MTYzYmZkNjZiZmJiMTg2M2IwNjU2Nzk5NzI5OTVjNGY="
     }
 
-    enum ErrorKey {
-        static let message = "ErrorMessage"
+    enum ErrorKey: String {
+        case message
+        case errorCode
+        case status
     }
 
     enum Storyboard {

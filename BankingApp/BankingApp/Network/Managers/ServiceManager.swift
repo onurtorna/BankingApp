@@ -18,19 +18,19 @@ final class ServiceManager: NSObject {
     ///   - response: Data response to handle
     ///   - type: Type of the response
     ///   - completion: Completion block
-    static func handleResponse<R: Codable>(_ response: DataResponse<Any>,
-                                           of type: R.Type,
-                                           completion: (R?, Error?) -> Void) {
+    static func handleResponse<R: BaseResponse>(_ response: DataResponse<Any>,
+                                                of type: R.Type,
+                                                completion: (SuccessResponse<R>?, Error?) -> Void) {
 
         if let JSON = response.result.value {
             #if DEBUG
-            print("JSON: \(JSON)")
+            debugPrint("JSON: \(JSON)")
             #endif
         }
 
         let error = ErrorHandler.error(from: response)
         guard let responseData = response.data,
-            error?.am_message == nil else {
+            error?.ba_message == nil else {
             completion(nil, error)
             return
         }
@@ -45,13 +45,13 @@ final class ServiceManager: NSObject {
 // MARK: - Helpers
 private extension ServiceManager {
 
-    static func parseResponseData<R: Decodable>(_ data: Data,
-                                                of type: R.Type,
-                                                error: Error?,
-                                                completion: (R?, Error?) -> Void) {
+    static func parseResponseData<R: BaseResponse>(_ data: Data,
+                                                   of type: R.Type,
+                                                   error: Error?,
+                                                   completion: (SuccessResponse<R>?, Error?) -> Void) {
 
         do {
-            let decodedObject = try decoder.decode(R.self, from: data)
+            let decodedObject = try decoder.decode(SuccessResponse<R>.self, from: data)
             completion(decodedObject, error)
         } catch {
             completion(nil, error)

@@ -15,6 +15,15 @@
 		1031659A2391E7F70000C04F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165992391E7F70000C04F /* SessionManager.swift */; };
 		1031659D2391E8370000C04F /* Error+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031659C2391E8370000C04F /* Error+Extensions.swift */; };
 		1031659F2391E8520000C04F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031659E2391E8520000C04F /* Global.swift */; };
+		103165A223928D220000C04F /* SuccessResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165A123928D220000C04F /* SuccessResponse.swift */; };
+		103165A423928D690000C04F /* BaseReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165A323928D690000C04F /* BaseReponse.swift */; };
+		103165A623928F210000C04F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165A523928F210000C04F /* APIClient.swift */; };
+		103165A923928F610000C04F /* SearchBICResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165A823928F610000C04F /* SearchBICResponse.swift */; };
+		103165AB2392A38D0000C04F /* BAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165AA2392A38D0000C04F /* BAError.swift */; };
+		103165AD2392A5A80000C04F /* BIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165AC2392A5A80000C04F /* BIC.swift */; };
+		103165B02392ABFC0000C04F /* SearchBICRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165AF2392ABFC0000C04F /* SearchBICRequest.swift */; };
+		103165B22392AC1B0000C04F /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165B12392AC1B0000C04F /* Dictionary+JSON.swift */; };
+		103165B52392AD700000C04F /* SearchBICFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103165B42392AD700000C04F /* SearchBICFields.swift */; };
 		10DA0B492391E3F800BDDD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B482391E3F800BDDD21 /* AppDelegate.swift */; };
 		10DA0B4B2391E3F800BDDD21 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */; };
 		10DA0B4E2391E3F800BDDD21 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DA0B4C2391E3F800BDDD21 /* Landing.storyboard */; };
@@ -52,6 +61,15 @@
 		103165992391E7F70000C04F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		1031659C2391E8370000C04F /* Error+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extensions.swift"; sourceTree = "<group>"; };
 		1031659E2391E8520000C04F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		103165A123928D220000C04F /* SuccessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessResponse.swift; sourceTree = "<group>"; };
+		103165A323928D690000C04F /* BaseReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReponse.swift; sourceTree = "<group>"; };
+		103165A523928F210000C04F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		103165A823928F610000C04F /* SearchBICResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBICResponse.swift; sourceTree = "<group>"; };
+		103165AA2392A38D0000C04F /* BAError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAError.swift; sourceTree = "<group>"; };
+		103165AC2392A5A80000C04F /* BIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIC.swift; sourceTree = "<group>"; };
+		103165AF2392ABFC0000C04F /* SearchBICRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBICRequest.swift; sourceTree = "<group>"; };
+		103165B12392AC1B0000C04F /* Dictionary+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+JSON.swift"; sourceTree = "<group>"; };
+		103165B42392AD700000C04F /* SearchBICFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBICFields.swift; sourceTree = "<group>"; };
 		10DA0B452391E3F800BDDD21 /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DA0B482391E3F800BDDD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +116,10 @@
 		1031658B2391E73A0000C04F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				103165AE2392ABE20000C04F /* Request */,
+				103165A023928D120000C04F /* Response */,
 				1031658C2391E7470000C04F /* APIRouter.swift */,
+				103165A523928F210000C04F /* APIClient.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -117,8 +138,45 @@
 			isa = PBXGroup;
 			children = (
 				1031659C2391E8370000C04F /* Error+Extensions.swift */,
+				103165B12392AC1B0000C04F /* Dictionary+JSON.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		103165A023928D120000C04F /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				103165A723928F540000C04F /* Base */,
+				103165A823928F610000C04F /* SearchBICResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		103165A723928F540000C04F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				103165A123928D220000C04F /* SuccessResponse.swift */,
+				103165A323928D690000C04F /* BaseReponse.swift */,
+				103165AA2392A38D0000C04F /* BAError.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		103165AE2392ABE20000C04F /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				103165B32392AD620000C04F /* Models */,
+				103165AF2392ABFC0000C04F /* SearchBICRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		103165B32392AD620000C04F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				103165B42392AD700000C04F /* SearchBICFields.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		10DA0B3C2391E3F800BDDD21 = {
@@ -207,6 +265,7 @@
 		10DA0B792391E44200BDDD21 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				103165AC2392A5A80000C04F /* BIC.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -413,15 +472,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				1031659D2391E8370000C04F /* Error+Extensions.swift in Sources */,
+				103165A923928F610000C04F /* SearchBICResponse.swift in Sources */,
+				103165AD2392A5A80000C04F /* BIC.swift in Sources */,
 				10DA0B4B2391E3F800BDDD21 /* LandingViewController.swift in Sources */,
 				1031659A2391E7F70000C04F /* SessionManager.swift in Sources */,
 				1031658D2391E7470000C04F /* APIRouter.swift in Sources */,
+				103165B02392ABFC0000C04F /* SearchBICRequest.swift in Sources */,
 				103165982391E7E30000C04F /* ServiceManager.swift in Sources */,
 				1031659F2391E8520000C04F /* Global.swift in Sources */,
+				103165B22392AC1B0000C04F /* Dictionary+JSON.swift in Sources */,
 				103165962391E7D00000C04F /* NetworkManager.swift in Sources */,
 				103165912391E7760000C04F /* ErrorHandler.swift in Sources */,
 				10DA0B492391E3F800BDDD21 /* AppDelegate.swift in Sources */,
+				103165A623928F210000C04F /* APIClient.swift in Sources */,
+				103165B52392AD700000C04F /* SearchBICFields.swift in Sources */,
+				103165A223928D220000C04F /* SuccessResponse.swift in Sources */,
 				1031658F2391E74D0000C04F /* Network.swift in Sources */,
+				103165AB2392A38D0000C04F /* BAError.swift in Sources */,
+				103165A423928D690000C04F /* BaseReponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

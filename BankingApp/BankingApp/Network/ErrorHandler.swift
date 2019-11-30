@@ -37,7 +37,7 @@ class ErrorHandler {
     /// - Returns: Error if there is a problem, nil otherwise
     static func error(from response: Alamofire.DataResponse<Any>) -> Error? {
 
-        let error = response.error
+        var error = response.error
 
         guard response.data != nil else {
             return ErrorHandler.genericError()
@@ -47,9 +47,24 @@ class ErrorHandler {
             if httpResponse.statusCode < 200 || httpResponse.statusCode >= 300 {
                 let description = "\(ErrorConstant.httpErrorDescriptionTitle) : \(httpResponse.statusCode)"
 
-                if response.data != nil {
-                    // FIXME: Additional error handling cases might be done here
-                    return genericError(description: description)
+                if let data = response.data {
+
+                    do {
+                        let baError: BAError = try decoder.decode(BAError.self,
+                                                                  from: data)
+
+                        var userInfo: [String: Any] = [NSLocalizedDescriptionKey: description]
+                        userInfo[Global.ErrorKey.message.rawValue] = baError.message
+                        userInfo[Global.ErrorKey.errorCode.rawValue] = baError.code
+                        userInfo[Global.ErrorKey.status.rawValue] = baError.status
+
+                        error = NSError(domain: ErrorConstant.httpErrorDomain,
+                                        code: 0,
+                                        userInfo: userInfo)
+
+                    } catch {
+                        return ErrorHandler.genericError(description: description)
+                    }
                 }
             }
         }
