@@ -9,5 +9,24 @@
 import UIKit
 
 final class BankSearchResultViewController: UIViewController {
-    // TODO: To be implemented
+
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var loadMoreButton: UIButton!
+
+    var viewModel: BankSearchResultViewModel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initializeViews()
+
+        viewModel.fetchBICResults()
+    }
+}
+
+// MARK: - Helpers
+private extension BankSearchResultViewController {
+
+    func initializeViews() {
+        loadMoreButton.isHidden = true
+    }
 }

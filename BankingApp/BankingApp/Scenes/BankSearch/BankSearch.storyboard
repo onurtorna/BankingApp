@@ -174,9 +174,38 @@
                     <view key="view" contentMode="scaleToFill" id="rEL-iO-cal">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rS8-kc-WDM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lx2-5T-8Oj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6K-dM-gm6">
+                                        <rect key="frame" x="0.0" y="718" width="414" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="eG3-gi-fnQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Load More"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rS8-kc-WDM" firstAttribute="trailing" secondItem="Yhm-eF-RF3" secondAttribute="trailing" id="4ac-aO-wTG"/>
+                            <constraint firstItem="rS8-kc-WDM" firstAttribute="leading" secondItem="Yhm-eF-RF3" secondAttribute="leading" id="6Zu-ip-jiT"/>
+                            <constraint firstItem="Yhm-eF-RF3" firstAttribute="bottom" secondItem="rS8-kc-WDM" secondAttribute="bottom" id="Ry0-3D-8tG"/>
+                            <constraint firstItem="rS8-kc-WDM" firstAttribute="top" secondItem="Yhm-eF-RF3" secondAttribute="top" id="wNw-Jc-PQW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Yhm-eF-RF3"/>
                     </view>
+                    <connections>
+                        <outlet property="loadMoreButton" destination="a6K-dM-gm6" id="U7e-pW-GBN"/>
+                        <outlet property="tableView" destination="Lx2-5T-8Oj" id="WiX-9N-ZJU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZm-E7-Jta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

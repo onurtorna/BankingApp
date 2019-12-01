@@ -14,6 +14,9 @@ final class BankSearchRouter: BankSearchRoutingProtocol {
                                             enteredFields: SearchBICFields) {
         let nextStoryBoard = UIStoryboard(name: Global.Storyboard.bankSearch, bundle: nil)
         guard let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: BankSearchResultViewController.reuseIdentifier) as? BankSearchResultViewController else { return }
+        let state = BankSearchResultState(enteredFields: enteredFields)
+        let dataController = BankSearchResultDataController()
+        nextViewController.viewModel = BankSearchResultViewModel(state: state, dataController: dataController)
         viewController.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
