@@ -189,6 +189,9 @@
                                             <constraint firstAttribute="height" constant="100" id="eG3-gi-fnQ"/>
                                         </constraints>
                                         <state key="normal" title="Load More"/>
+                                        <connections>
+                                            <action selector="loadMoreButtonTapped:" destination="Nni-3K-XCv" eventType="touchUpInside" id="Ht9-3O-6nL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

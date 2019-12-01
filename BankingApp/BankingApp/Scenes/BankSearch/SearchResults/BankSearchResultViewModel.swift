@@ -77,6 +77,14 @@ final class BankSearchResultViewModel {
     func item(at index: Int) -> BIC {
         return state.bicList[index]
     }
+
+    /// Checks if shown index is in the end of the current fetched list and there are some items to be fetched
+    /// - Parameter index: Current shown index
+    func checkForLoadingMore(for index: Int) {
+        if index == state.bicList.count - 1 {
+            stateChangeHandler?(.canLoadMoreState(canLoadMore: state.canLoadMore))
+        }
+    }
 }
 
 // MARK: - Network

@@ -41,8 +41,7 @@ private extension BankSearchResultViewController {
             break
 
         case .canLoadMoreState(canLoadMore: let canLoadMore):
-            // TODO: Show/Hide
-            break
+            loadMoreButton.isHidden = !canLoadMore
         }
     }
 
@@ -50,6 +49,23 @@ private extension BankSearchResultViewController {
         loadMoreButton.isHidden = true
         tableView.register(BankResultTableViewCell.self, forCellReuseIdentifier: BankResultTableViewCell.reuseIdentifier)
         tableView.dataSource = self
+        tableView.delegate = self
+    }
+}
+
+// MARK: - Actions
+private extension BankSearchResultViewController {
+
+    @IBAction func loadMoreButtonTapped(_ sender: Any) {
+        loadMoreButton.isHidden = true
+        viewModel.fetchBICResults()
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension BankSearchResultViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -66,6 +82,7 @@ extension BankSearchResultViewController: UITableViewDataSource {
                                                         fatalError("BankResultTableViewCell could not dequeued correctly")
         }
         let item = viewModel.item(at: indexPath.row)
+        viewModel.checkForLoadingMore(for: indexPath.row)
         cell.populate(with: item)
         return cell
     }
