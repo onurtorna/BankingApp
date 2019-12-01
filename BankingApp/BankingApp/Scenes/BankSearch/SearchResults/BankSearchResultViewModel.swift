@@ -11,8 +11,16 @@ import Foundation
 // MARK: - BankSearchResultState
 final class BankSearchResultState {
 
+    enum Change {
+        case itemsFetched
+        case errorReceived(message: String?)
+        case canLoadMoreState(canLoadMore: Bool)
+    }
+
     /// Pre entered fields to search
     let enteredFields: SearchBICFields
+
+    var onChange: ((BankSearchResultState.Change) -> Void)?
 
     var currentPageNumber = -1
 
@@ -20,10 +28,18 @@ final class BankSearchResultState {
     var canLoadMore = false
 
     /// Received service error's message
-    var receivedErrorMessage: String?
+    var receivedErrorMessage: String? {
+        didSet {
+            onChange?(.errorReceived(message: receivedErrorMessage))
+        }
+    }
 
     /// Total BIC list that are fetched from server
-    var bicList: [BIC] = []
+    var bicList: [BIC] = [] {
+        didSet {
+            onChange?(.itemsFetched)
+        }
+    }
 
     init(enteredFields: SearchBICFields) {
         self.enteredFields = enteredFields
@@ -36,10 +52,30 @@ final class BankSearchResultViewModel {
     private let state: BankSearchResultState
     private let dataController : BankSearchResultDataProtocol
 
+    var stateChangeHandler: ((BankSearchResultState.Change) -> Void)? {
+        get {
+            return state.onChange
+        }
+
+        set {
+            state.onChange = newValue
+        }
+    }
+
+    /// Total number of items to show
+    var numberOfItems: Int {
+        return state.bicList.count
+    }
+
     init(state: BankSearchResultState,
          dataController: BankSearchResultDataProtocol) {
         self.state = state
         self.dataController = dataController
+    }
+
+    /// Specific item at given index
+    func item(at index: Int) -> BIC {
+        return state.bicList[index]
     }
 }
 

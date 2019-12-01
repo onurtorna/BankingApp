@@ -36,6 +36,7 @@
 		1098A3FC23933B15005BB328 /* BankSearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1098A3FB23933B15005BB328 /* BankSearchResultViewModel.swift */; };
 		1098A3FF23933C07005BB328 /* BankSearchResultDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1098A3FE23933C07005BB328 /* BankSearchResultDataController.swift */; };
 		1098A40123933D0A005BB328 /* BankSearchResultDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1098A40023933D0A005BB328 /* BankSearchResultDataProtocol.swift */; };
+		1098A40523934226005BB328 /* BankResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1098A40423934226005BB328 /* BankResultTableViewCell.swift */; };
 		10DA0B492391E3F800BDDD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B482391E3F800BDDD21 /* AppDelegate.swift */; };
 		10DA0B4B2391E3F800BDDD21 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */; };
 		10DA0B4E2391E3F800BDDD21 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DA0B4C2391E3F800BDDD21 /* Landing.storyboard */; };
@@ -94,6 +95,7 @@
 		1098A3FB23933B15005BB328 /* BankSearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSearchResultViewModel.swift; sourceTree = "<group>"; };
 		1098A3FE23933C07005BB328 /* BankSearchResultDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSearchResultDataController.swift; sourceTree = "<group>"; };
 		1098A40023933D0A005BB328 /* BankSearchResultDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSearchResultDataProtocol.swift; sourceTree = "<group>"; };
+		1098A40423934226005BB328 /* BankResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankResultTableViewCell.swift; sourceTree = "<group>"; };
 		10DA0B452391E3F800BDDD21 /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DA0B482391E3F800BDDD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10DA0B4A2391E3F800BDDD21 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +270,22 @@
 			path = DataController;
 			sourceTree = "<group>";
 		};
+		1098A402239341FE005BB328 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				1098A4032393420D005BB328 /* Cells */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		1098A4032393420D005BB328 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1098A40423934226005BB328 /* BankResultTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		10DA0B3C2391E3F800BDDD21 = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +318,7 @@
 				10DA0B782391E43C00BDDD21 /* Network */,
 				103562082393326D003D0EEC /* Protocols */,
 				10DA0B762391E41E00BDDD21 /* Resources */,
+				1098A402239341FE005BB328 /* ReusableViews */,
 				10DA0B772391E43400BDDD21 /* Scenes */,
 			);
 			path = BankingApp;
@@ -564,6 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1098A40523934226005BB328 /* BankResultTableViewCell.swift in Sources */,
 				103165BD2392C0070000C04F /* BankSearchViewController.swift in Sources */,
 				1098A3FF23933C07005BB328 /* BankSearchResultDataController.swift in Sources */,
 				1031659D2391E8370000C04F /* Error+Extensions.swift in Sources */,

@@ -29,3 +29,22 @@ struct BIC: Codable {
     /// Country language code
     var countryCode: String
 }
+
+// MARK: - BankResultTableViewCellDataSource
+extension BIC: BankResultTableViewCellDataSource {
+    var _bankName: String {
+        return bankName
+    }
+
+    var _address: String {
+        return location
+    }
+
+    var _countryCode: String {
+        return countryCode
+    }
+
+    var _blz: String {
+        return blz
+    }
+}
